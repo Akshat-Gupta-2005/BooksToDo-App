@@ -1,0 +1,57 @@
+.Block {
+    display: flex;
+    justify-content: space-between;
+    ;
+    align-items: center;
+    width: 500px;
+    height: 100px;
+    background-color: bisque;
+    border-radius: 15px;
+    margin: 10px;
+    overflow: hidden;
+}
+.Left{
+    /* background-color: red; */
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
+}
+
+.Middle{
+    /* background-color: red; */
+    height: 100%;
+    width: 300px;
+    opacity: 60%;
+}
+
+.Middle .t{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    height: 50%;
+}
+.Middle .a{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    height: 50%;
+}
+.text{
+    opacity: 100%;
+}
+.Right {
+    /* background: transparent; */
+    background-color: transparent;
+    border: none;
+    padding-right: 10px; 
+
+}
+
+.trashicon {
+    height: 25px;
+    width: 20px;
+}

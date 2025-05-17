@@ -1,9 +1,14 @@
 import './App.css';
+import Header from './components/Header';
+import AddBtn from './components/AddBtn';
+import CardContainer from './components/CardContainer';
 
 function App() {
   return (
     <>
-      <h1>Books To Do</h1>
+      <Header />
+      <AddBtn />
+      <CardContainer />
     </>
   );
 }

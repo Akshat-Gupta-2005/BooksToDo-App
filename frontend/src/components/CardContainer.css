@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(247, 234, 216);
+    border-radius: 50px;
+    width: 80vw;
+}
