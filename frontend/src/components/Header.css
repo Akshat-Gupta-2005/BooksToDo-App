@@ -1,0 +1,11 @@
+.blue{
+    background-color: rgb(247, 162, 59);
+    width: 100vw;
+    display: flex;
+    gap: 20px;
+    font-size: large;
+}
+
+/* Link{
+    text
+} */

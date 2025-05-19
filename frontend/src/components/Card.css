@@ -3,7 +3,7 @@
     justify-content: space-between;
     ;
     align-items: center;
-    width: 500px;
+    width: 1000px;
     height: 100px;
     background-color: bisque;
     border-radius: 15px;
@@ -14,13 +14,13 @@
     /* background-color: red; */
     height: 100%;
     width: 30%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .Middle{
     /* background-color: red; */
     height: 100%;
-    width: 300px;
+    width: 600px;
     opacity: 60%;
 }
 
@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 20px;
     height: 50%;
 }
 .Middle .a{
@@ -37,7 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 15px;
     height: 50%;
 }
 .text{
@@ -48,8 +48,15 @@
     background-color: transparent;
     border: none;
     padding-right: 10px; 
-
 }
+
+.Right:hover {
+    background-color: transparent;
+    cursor: pointer;
+    /* color: red; */
+}
+
+
 
 .trashicon {
     height: 25px;
