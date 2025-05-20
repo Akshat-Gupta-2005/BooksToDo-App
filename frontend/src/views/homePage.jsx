@@ -7,7 +7,7 @@ import CardContainer from '../components/CardContainerRemove';
 const homePage = () => {
     return (
         <>
-            <div className='homePage'>
+            <div className='homePage '>
                 <div className='btnbox'>
                     <AddBtn />
                 </div>

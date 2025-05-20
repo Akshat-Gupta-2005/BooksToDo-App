@@ -20,7 +20,11 @@ const Card = (props) => {
     
     return (
         <div className='Block'>
+            <a className='ahere' href={props.element?.volumeInfo?.previewLink} target="_blank" rel="noopener noreferrer">
+
             <img className='Left' src={props.element.volumeInfo.imageLinks.smallThumbnail||props.element.volumeInfo.imageLinks.thumbnail} alt="asd" />
+            </a>
+
             <div className='Middle'>
                 <div className='t'>Title: <span className="text">{props.title.slice(0,50)}</span></div>
                 <div className='a'>Author: <span className="text">{props.author}</span></div>
