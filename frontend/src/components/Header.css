@@ -1,7 +1,30 @@
 .blue{
-    background-color: rgb(247, 162, 59);
+    background-color: rgba(141, 110, 81, 0.8);
     width: 100vw;
     display: flex;
     gap: 20px;
     font-size: large;
+    padding-left: 10px;
+    box-sizing: border-box;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 50px 50px;
+    /* opacity: 0.8; */
+}
+
+.blue a{
+    opacity: 1;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.blue a:hover{
+    /* color: #8d6e51; */
+    /* box-shadow: 0 0 20px 5px #8d6e51; */
+    transition: all 0.2s ease-in-out;
+    text-decoration: underline;
+    scale: 1.1;
 }

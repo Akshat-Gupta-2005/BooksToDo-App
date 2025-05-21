@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './AddBtn.css'
+import './SearchBtn.css'
 
 const AddBtn = () => {
   return (
     <Link to="/search" className='add-btnbox'>
       <div className='add-btn'>
-        Add
+        Search
       </div>
     </Link>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import './homePage.css'
-import AddBtn from '../components/AddBtn';
+import SearchBtn from '../components/SearchBtn';
 import CardContainer from '../components/CardContainerRemove';
 
 
@@ -9,7 +9,7 @@ const homePage = () => {
         <>
             <div className='homePage '>
                 <div className='btnbox'>
-                    <AddBtn />
+                    <SearchBtn />
                 </div>
                 <CardContainer />
             </div>

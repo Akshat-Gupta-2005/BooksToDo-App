@@ -1,11 +1,15 @@
 .container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
     gap: 20px;
+    flex-wrap: wrap;
+    align-content: center;
     padding: 20px;
-    background-color: rgb(247, 234, 216);
+    background-color: rgba(141, 110, 81, 0.8);
     border-radius: 50px;
-    width: 80vw;
+    /* width: 90vw; */
+    max-width: 85vw;
+    
 }

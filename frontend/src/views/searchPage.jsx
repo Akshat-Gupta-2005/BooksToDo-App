@@ -8,13 +8,13 @@ import apiFetch from '../controllers/apiFetch'
 const SearchPage = () => {
     const key = process.env.REACT_APP_MY_KEY
     // console.log(key);
-    
+
     // const key = "AIzaSyBX2Err3hD3JST_XmxqpJ5anLA-9VC2nZ8"
     const [text, setText] = useState('');
     const [books, setBooks] = useState();
 
     const searchResults = async () => {
-        const articles = await apiFetch(`https://www.googleapis.com/books/v1/volumes?q=` + text.replace(' ' , '+') + `&key=` + key)
+        const articles = await apiFetch(`https://www.googleapis.com/books/v1/volumes?q=` + text.replace(' ', '+') + `&key=` + key + '&maxResults=40')
         await setBooks(articles)
         await console.log(books)
     }
@@ -22,11 +22,11 @@ const SearchPage = () => {
     return (
         <div className='box '>
             <div>
-                <input type="text" placeholder='Search' onChange={(e) => setText(e.target.value) } className='searchbox' value={text}/>
-                <button onClick={()=>{searchResults()}} className='searchbtn'>Search</button>
+                <input type="text" placeholder='Search' onKeyDown={(e) => {if (e.key === 'Enter') {searchResults()}}} onChange={(e) => setText(e.target.value)} className='searchbox' value={text}/>
+                <button onClick={() => { searchResults() }} className='searchbtn'>Search</button>
             </div>
-            {books?<CardContainer books={books} /> : ''}
-            
+            {books ? <CardContainer books={books} /> : ''}
+
         </div>
     )
 }

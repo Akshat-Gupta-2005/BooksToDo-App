@@ -1,0 +1,21 @@
+.add-btn{
+    background-color: rgba(247, 234, 216, 0.8) /* 50% opacity */;
+    margin: 10px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 10px ;
+    /* width: 40px; */
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}
+.add-btn:hover{
+    /* scale: 1.1; */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 20px 5px #8d6e51
+}
+
+.add-btnbox{
+    text-decoration: none;
+
+}

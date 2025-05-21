@@ -4,6 +4,8 @@ import Header from './components/Header';
 
 import HomePage from './views/homePage';
 import SearchPage from './views/searchPage';
+import AboutPage from './views/aboutPage';
+import ContactPage from './views/contactPage';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Router>
     </>
