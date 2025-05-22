@@ -30,7 +30,7 @@
     /* background-color: #fff; */
 }
 
-.PopupImg>img{
+.PopupImg>a>img{
     object-fit: scale-down;
     border-radius: 20px;
     background-color: #69421e;

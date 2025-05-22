@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const Popup = ({ book, setPopupDisplay }) => {
     if (!book || !book.volumeInfo) return null;
 
-    const { title, authors, description, imageLinks, publishedDate, publisher, pageCount, averageRating } = book.volumeInfo;
+    const { title, authors, description, imageLinks, publishedDate, publisher, pageCount, averageRating, previewLink } = book.volumeInfo;
 
     return (
         <div className="PopupPage" onClick={() => setPopupDisplay(false)}>
@@ -17,14 +17,16 @@ const Popup = ({ book, setPopupDisplay }) => {
 
                 <div className="PopupPageBox" onClick={(e) => e.stopPropagation()}>
                     <div className="PopupImg">
-                        <img
-                            src={
-                                imageLinks?.thumbnail ||
-                                imageLinks?.smallThumbnail ||
-                                '/images/books.png'
-                            }
-                            alt={title}
-                        />
+                        <a className='ahere' href={previewLink} target="_blank" rel="noopener noreferrer">
+                            <img
+                                src={
+                                    imageLinks?.thumbnail ||
+                                    imageLinks?.smallThumbnail ||
+                                    '/images/books.png'
+                                }
+                                alt={title}
+                            />
+                        </a>
                     </div>
                     <div className="PopupInfo">
                         <div className="PopupInfoUp">
