@@ -1,8 +1,8 @@
 import React from 'react'
-import CardContainer from '../components/CardContainerAdd'
+import CardContainer from '../../components/CardContainer/CardContainerAdd'
 import './searchPage.css'
 import { useState } from 'react'
-import apiFetch from '../controllers/apiFetch'
+import apiFetch from '../../Api/apiFetch'
 
 
 const SearchPage = () => {
@@ -15,8 +15,9 @@ const SearchPage = () => {
 
     const searchResults = async () => {
         const articles = await apiFetch(`https://www.googleapis.com/books/v1/volumes?q=` + text.replace(' ', '+') + `&key=` + key + '&maxResults=40')
-        await setBooks(articles)
-        await console.log(books)
+        // await setBooks(articles)
+        setBooks(articles)
+        // await console.log(books)
     }
 
     return (

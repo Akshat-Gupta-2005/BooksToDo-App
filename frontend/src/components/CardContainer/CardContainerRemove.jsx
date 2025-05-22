@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Card from './CardRemove';
+import Card from '../Card/CardRemove';
 import './CardContainer.css';
 import { motion } from 'framer-motion';
 

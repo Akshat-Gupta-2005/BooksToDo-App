@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './CardAdd';
+import Card from '../Card/CardAdd';
 import './CardContainer.css';
 import { motion } from 'framer-motion';
 

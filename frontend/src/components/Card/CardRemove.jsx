@@ -1,22 +1,23 @@
 import React from 'react'
 import './Card.css'
-import { ReactComponent as Add } from '../icons/plus-svgrepo-com.svg';
-
-
+import { ReactComponent as BookmarkIcon } from '../../icons/trash-can-svgrepo-com.svg';
+import { useNavigate } from 'react-router-dom';
 
 
 const Card = (props) => {
-    const addBook = async (e) => {
-        await fetch('http://localhost:5000/api/books', {
-            method: 'POST',
+    const navigate = useNavigate();
+    const removeBooke = async (e) => {
+        await fetch(`http://localhost:5000/api/books/${props.element.id}`, {
+            method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(props.element)
         })
-        console.log(props.element);
+        navigate(0)
 
     }
+
+
     return (
         <div className='Block'>
             <a className='ahere' href={props.element?.volumeInfo?.previewLink} target="_blank" rel="noopener noreferrer">
@@ -26,9 +27,10 @@ const Card = (props) => {
                     "/images/books.png" // optional fallback image if both are undefined
                 } alt="asd" />
             </a>
+
             <div className="right">
                 <button className='trashbtn text'>Info</button>
-                <button className='trashbtn' onClick={addBook}><Add className="trashicon" /></button>
+                <button className='trashbtn' onClick={() => { removeBooke() }}><BookmarkIcon className="trashicon" /></button>
             </div>
 
         </div>

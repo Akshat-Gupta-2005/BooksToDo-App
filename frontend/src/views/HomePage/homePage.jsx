@@ -1,7 +1,7 @@
 import React from 'react'
 import './homePage.css'
-import SearchBtn from '../components/SearchBtn';
-import CardContainer from '../components/CardContainerRemove';
+import SearchBtn from '../../components/SearchBtn/SearchBtn';
+import CardContainer from '../../components/CardContainer/CardContainerRemove';
 
 
 const homePage = () => {
