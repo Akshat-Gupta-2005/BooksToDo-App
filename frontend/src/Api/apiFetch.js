@@ -9,7 +9,12 @@ import axios from 'axios'
 const apiFetch = async (url) => {
   try {
     const res = await axios.get(url);
-    return res.data.items;
+    const items = res.data.items || []
+    items.forEach((e)=>{
+      e.bookMarked = false
+    })
+    console.log(items)
+    return items;
   } catch (err) {
     console.error(err);
     return []; // optional: return fallback value

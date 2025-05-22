@@ -1,0 +1,87 @@
+.PopupPage{
+    position: fixed;
+    /* background-color: rgba(85, 40, 20, 0.7); */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    /* width: 100vw; */
+    background-color: rgba(85, 40, 20, 0.2); 
+    backdrop-filter: blur(6px);
+
+}
+
+.PopupPageBox{
+    background-color: #d5bda1;
+    width: 700px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.PopupImg{
+    object-fit: fill;
+    /* background-color: #fff; */
+}
+
+.PopupImg>img{
+    object-fit: scale-down;
+    border-radius: 20px;
+    background-color: #69421e;
+    height: 100%;
+    width: 250px;
+}
+
+.PopupInfo{
+    /* background-color: black; */
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.PopupInfoUp{
+    /* background-color: red; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.PopupInfoUpTitle{
+    text-align: center;
+    font-size: 25px;
+    color: #4b2f15;
+}
+.PopupInfoUpAuthor{
+    text-align: center;
+    font-size: 15px;
+    color: #69421ebd;
+}
+.PopupInfoMid{
+    /* background-color: blue; */
+    width: 100%;
+    height: 43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #69421e;
+}
+.PopupInfoDown{
+    /* background-color: yellow; */
+    width: 100%;
+    height: 27%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #4b2f15d2;
+}
+

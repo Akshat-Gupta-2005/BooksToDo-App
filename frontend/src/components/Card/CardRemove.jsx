@@ -22,6 +22,27 @@ const Card = (props) => {
         navigate(0)
     }
 
+    // const infoClick = async () => {
+    //     try {
+    //         const res = await axios.get(`http://localhost:5000/api/books/${props.element.id}`);
+    //         props.setPopupInfo(res.data);
+    //         props.setPopupDisplay(true);
+    //         console.log("Popup triggered1");
+    //     } catch (err) {
+    //         console.error("Error fetching book info:", err);
+    //     }
+    // };
+    const infoClick = async () => {
+        try {
+            // const res = await axios.get(`http://localhost:5000/api/books/${props.element.id}`);
+            props.setPopupInfo(props.element);
+            props.setPopupDisplay(true);
+            console.log("Popup triggered2");
+        } catch (err) {
+            console.error("Error fetching book info:", err);
+        }
+    };
+
     return (
         <div className='Block'>
             <a className='ahere' href={props.element?.volumeInfo?.previewLink} target="_blank" rel="noopener noreferrer">
@@ -33,7 +54,7 @@ const Card = (props) => {
             </a>
 
             <div className="right">
-                <button className='trashbtn text'>Info</button>
+                <button className='trashbtn text' onClick={()=>{infoClick()}}>Info</button>
                 <button className='trashbtn' onClick={() => { removeBook() }}><BookmarkIcon className="trashicon" /></button>
             </div>
 

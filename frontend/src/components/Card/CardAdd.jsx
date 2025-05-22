@@ -21,6 +21,16 @@ const Card = (props) => {
         await axios.post("http://localhost:5000/api/books" , props.element)
     }
 
+    const infoClick = async () => {
+        try {
+            props.setPopupInfo(props.element);
+            props.setPopupDisplay(true);
+            console.log("Popup triggered");
+        } catch (err) {
+            console.error("Error fetching book info:", err);
+        }
+    };
+
     return (
         <div className='Block'>
             <a className='ahere' href={props.element?.volumeInfo?.previewLink} target="_blank" rel="noopener noreferrer">
@@ -31,7 +41,7 @@ const Card = (props) => {
                 } alt="asd" />
             </a>
             <div className="right">
-                <button className='trashbtn text'>Info</button>
+                <button className='trashbtn text' onClick={()=>{infoClick()}}>Info</button>
                 <button className='trashbtn' onClick={addBook}><Add className="trashicon" /></button>
             </div>
 
