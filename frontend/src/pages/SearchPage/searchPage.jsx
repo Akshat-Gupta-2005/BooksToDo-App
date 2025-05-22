@@ -2,7 +2,7 @@ import React from 'react'
 import CardContainer from '../../components/CardContainer/CardContainerAdd'
 import './searchPage.css'
 import { useState } from 'react'
-import apiFetch from '../../Api/apiFetch'
+import apiFetch from '../../api/apiFetch'
 
 
 const SearchPage = () => {
