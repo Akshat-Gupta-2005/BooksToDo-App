@@ -2,22 +2,32 @@ import React, { useEffect, useState } from 'react';
 import Card from '../Card/CardRemove';
 import './CardContainer.css';
 import { motion } from 'framer-motion';
+import axios from 'axios'
 
 const CardContainer = () => {
     const [books, setBooks] = useState([]);
 
-    useEffect(() => {
-        const fetchBooks = async () => {
-            try {
-                const res = await fetch('http://localhost:5000/api/books');
-                const data = await res.json();
-                console.log(data);
-                setBooks(data);
-            } catch (err) {
-                console.error("Failed to fetch books:", err);
-            }
-        };
+    // const fetchBooks = async () => {
+    //     try {
+    //         const res = await fetch('http://localhost:5000/api/books');
+    //         const data = await res.json();
+    //         console.log(data);
+    //         setBooks(data);
+    //     } catch (err) {
+    //         console.error("Failed to fetch books:", err);
+    //     }
+    // };
 
+    const fetchBooks = async () =>{
+        try {
+            const res = await axios.get('http://localhost:5000/api/books')
+            setBooks(res.data)
+        }catch(err){
+            console.error("Failed to fetch books")
+        }
+    }
+    
+    useEffect(() => {
         fetchBooks();
     }, []);
 

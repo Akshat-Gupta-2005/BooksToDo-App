@@ -2,10 +2,10 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 
-import HomePage from './views/homePage';
-import SearchPage from './views/searchPage';
-import AboutPage from './views/aboutPage';
-import ContactPage from './views/contactPage';
+import HomePage from './views/HomePage/homePage';
+import SearchPage from './views/SearchPage/searchPage';
+import AboutPage from './views/AboutPage/aboutPage';
+import ContactPage from './views/ContactPage/contactPage';
 
 function App() {
   return (
