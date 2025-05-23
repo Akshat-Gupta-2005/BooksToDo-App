@@ -8,9 +8,9 @@ import Card from '../Card/CardAdd';
 import Popup from '../Popup/Popup';
 
 
-const CardContainer = ({ books }) => {
+const CardContainer = ({ books , setBooks}) => {
     const [PopupInfo, setPopupInfo] = useState()
-    const [PopupDisplay, setPopupDisplay] = useState(false)
+    const [PopupDisplay, setPopupDisplay] = useState(false)  
 
 
     return (
@@ -24,10 +24,12 @@ const CardContainer = ({ books }) => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1, duration: 0.4, ease: 'easeOut' }}
                     >
-                        {!element.bookMarked && <Card
+                        {<Card
                             element={element}
                             setPopupDisplay={setPopupDisplay}
                             setPopupInfo={setPopupInfo}
+                            books={books}
+                            setBooks={setBooks}
                         />}
                     </motion.div>
                 ))}
