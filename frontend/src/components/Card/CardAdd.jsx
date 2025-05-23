@@ -1,6 +1,7 @@
 import React from 'react'
 import './Card.css'
 import { ReactComponent as Add } from '../../icons/plus-svgrepo-com.svg';
+import { ReactComponent as Tick } from '../../icons/accept-check-good-mark-ok-tick-svgrepo-com.svg';
 import axios from 'axios'
 
 
@@ -17,9 +18,24 @@ const Card = (props) => {
     //     console.log(props.element);
     // }
 
-    const addBook = async() =>{
-        await axios.post("http://localhost:5000/api/books" , props.element)
-    }
+    // const addBook = async() =>{
+    //     await axios.post("http://localhost:5000/api/books" , props.element)
+    //     // console.log();
+
+    //     let books = props.books
+    //     books[books.indexOf(props.element)].bookMarked = true
+    //     props.setBooks(books)
+    // }
+
+    const addBook = async () => {
+        await axios.post("http://localhost:5000/api/books", props.element);
+
+        const updatedBooks = props.books.map(book =>
+            book.id === props.element.id ? { ...book, bookMarked: true } : book
+        );
+
+        props.setBooks(updatedBooks);
+    };
 
     const infoClick = async () => {
         try {
@@ -41,8 +57,9 @@ const Card = (props) => {
                 } alt="asd" />
             </a>
             <div className="right">
-                <button className='trashbtn text' onClick={()=>{infoClick()}}>Info</button>
-                <button className='trashbtn' onClick={addBook}><Add className="trashicon" /></button>
+                <button className='trashbtn text' onClick={() => { infoClick() }}>Info</button>
+                {!props.element.bookMarked && <button className='addbtn' onClick={addBook}><Add className="trashicon" /></button>}
+                {props.element.bookMarked && <button className='tickbtn'><Tick className="tickicon" /></button>}
             </div>
 
         </div>

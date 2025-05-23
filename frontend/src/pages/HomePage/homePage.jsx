@@ -4,7 +4,7 @@ import SearchBtn from '../../components/SearchBtn/SearchBtn';
 import CardContainer from '../../components/CardContainer/CardContainerRemove';
 
 
-const homePage = () => {
+const HomePage = () => {
     return (
         <>
             <div className='homePage '>
@@ -17,4 +17,4 @@ const homePage = () => {
     )
 }
 
-export default homePage
+export default HomePage

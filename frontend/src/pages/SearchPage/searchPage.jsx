@@ -31,7 +31,7 @@ const SearchPage = () => {
                 <button onClick={() => { searchResults() }} className='searchbtn'>Search</button>
             </div>
             {spinner && <Spinner />}
-            {!spinner && books ? <CardContainer books={books} /> : ''}
+            {!spinner && books ? <CardContainer books={books} setBooks={setBooks}/> : ''}
 
         </div>
     )

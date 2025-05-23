@@ -45,6 +45,22 @@
     border: none;
     border-radius: 15px; 
 }
+.addbtn {
+    color: black;
+    padding: 2px 5px;
+    background-color: transparent;
+    /* background-color: blue; */
+    border: none;
+    border-radius: 15px; 
+}
+.tickbtn {
+    color: black;
+    padding: 2px 5px;
+    background-color: transparent;
+    /* background-color: blue; */
+    border: none;
+    border-radius: 15px; 
+}
 
 .trashbtn:hover {
     /* background-color: transparent; */
@@ -54,8 +70,24 @@
     transition: all 0.2s ease-in-out;
     box-shadow: 0 0 20px 1px #8d6e51
 }
+.addbtn:hover {
+    /* background-color: transparent; */
+    cursor: pointer;
+    /* border: solid 1px black;*/
+    scale: 1.1;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 20px 1px #8d6e51
+}
 
 .trashicon {
+
+    /* background-color: red; */
+    background-color: transparent;
+    height: 30px;
+    width: 25px;
+    
+}
+.tickicon {
 
     /* background-color: red; */
     background-color: transparent;
